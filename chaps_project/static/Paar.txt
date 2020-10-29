@@ -1,0 +1,106 @@
+2367;0;0;Begriff Stoffwechsel;Vorgänge zur Energiegewinnung, Körpererhaltung;1;1
+2371;4;0;resorbieren;aus dem Darm ins Blut aufnehmen;1;1
+2375;8;0;Eiweiße;Proteine, bestehen aus Aminosäureketten;1;1
+2376;9;0;Bsp. für körpereigene Eiweiße;Zellenzyme, Sekrete;1;1
+2378;11;0;nicht essenzielle Aminosäuren;kann die Leber aus anderen Aminosäuren herstellen;1;1
+2381;14;0;Nukleotiden;daraus werden Nukleinsäuren gebildet;1;1
+2385;18;0;Vorkommen von ungesättigten Fettsäuren;v.a. in pflanzlichen Ölen;1;1
+2386;19;0;Aufgabe Fettzellen;bauen Triglyzeride auf und speichern die Energie;1;1
+2389;1;1;Aufgabe von Cholesterin;Baustein für Hormone und Gallensäuren;1;1
+2391;3;1;LDL;low density lipoprotein, <160 mg/dl;1;1
+2392;4;1;steigendes LDL;begünstigt Arteriosklerose;1;1
+2393;5;1;Arteriosklerose;Fettablagerungen in den Arterien;1;1
+2394;6;1;Ausscheidung von Cholesterin;von der Leber mit dem Gallensaft;1;1
+2395;7;1;Vitamine;essenziell, mit Ausnahme von D und K;1;1
+2396;8;1;Vitamin K;wird von den Colibakterien im Darm hergestellt;1;1
+2398;10;1;Vitamine E, D, K, A;sind fettlöslich;1;1
+2399;11;1;Vitamine A und D;kann der Körper speichern, Problem bei Überangebot;1;1
+2405;17;1;Kalzium und Magnesium;geben Knochen und Zahnbein Festigkeit;1;1
+2406;18;1;Mineralstoffmangel zeigt sich;z.B. durch Muskelkrämpfe;1;1
+2408;1;2;Bsp. für Spurenelemente;Jodid, Fluorid, Eisen;1;1
+2409;2;2;Aufgabe Jodid;Aufbau des Schilddrüsenhormons;1;1
+2410;3;2;Aufgabe Fluorid;schützt den Zahnschmelz vor Säure;1;1
+2411;4;2;Aufgabe Eisen;wird ins Hämoglobin eingebaut;1;1
+2413;6;2;Zellplasma;Grundbestandteil einer Zelle, zähe Flüssigkeit;1;1
+2414;7;2;Blutplasma;Blutflüssigkeit für den Transport der Blutzellen;1;1
+2415;8;2;Aufgabe Wasser;Stoffe können aufgelöst und transportiert werden;1;1
+2417;10;2;Wassermangel führt zu;Störungen des Blutkreislaufs;1;1
+2418;11;2;Wasserverlust durch;Stuhl, Urin, Verdunstung;1;1
+2419;12;2;Wasseraufnahme durch;Essen, Trinken, Nährstoffabbau;1;1
+2423;16;2;Bsp. für Ballaststoffe;Zellulose, Pektin;1;1
+2424;17;2;Ballaststoffe;können nicht resorbiert werden;1;1
+2427;20;2;regelmäßige Stuhlentleerung gilt als Schutz vor;Darmkrebs;1;1
+2431;2;3;Co-Enzyme sind meistens;Vitamine;1;1
+2435;6;3;Zellenzyme;bleiben in den Zellen;1;1
+2436;7;3;Enzyme Gamma-GT, GOT vermehrt im Blut bei;Leberentzündungen;1;1
+2437;8;3;Enzyme Troponin T, CK vermehrt im Blut bei;Herzinfarkt, Zerfall von Herzmuskelzellen;1;1
+2440;11;3;Baustoffwechsel;Aufbau von Nahrungsbausteinen;1;1
+2442;13;3;Betriebsstoffwechsel;Abbau der Nahrungsbausteine;1;1
+2443;14;3;Der Abbau der Nahrungsbausteine findet satt.;um Energie zu produzieren.;1;1
+2448;19;3;Verdauungsenzyme sind;abbauende Enzyme im Verdauungskanal;1;1
+2449;20;3;Zellenzyme sind;aufbauende oder abbauende Enzyme in der Zelle;1;1
+2450;0;4;Dentin, Zahnbein;knochenähnliche Substanz in den Zähnen;1;1
+2455;4;5;Gelenke;Verbindungsstellen zwischen Knochen;0;3
+2456;5;5;passiver Bewegungsapparat;Skelett;0;3
+2457;6;5;aktiver Bewegungsapparat;Skelettmuskulatur;0;3
+2458;7;5;Organsystem Bewegungsapparat;aktiver und passiver Bewegungsapparat;0;3
+2459;8;5;Organsysteme;werden von zusammenarbeitenden Organen gebildet;0;3
+2460;9;5;Gewebe;Bausteine der Organe, vier Hauptgruppen;0;3
+2461;10;5;Binde- und Stützgewebe;daraus sind die Knochen und Gelenke aufgebaut;0;3
+2463;12;5;weitere Gewebegruppen;Epithel- und Nervengewebe;0;3
+2466;15;5;Fibroblasten;faserbildende Zellen;0;3
+2467;16;5;Lipozyten;Fettzellen;0;3
+2468;17;5;Chondrozyten;Knorpelzellen;0;3
+2469;18;5;Osteozyten;Knochenzellen;0;3
+2470;19;5;Zellen des Immunsystems sind...;ins Binde- und Stützgewebe eingebettet;0;3
+2471;20;5;Faserarten;kollagene, elastische und retikuläre Fasern;0;3
+2472;21;5;kollagene Fasern;liegen gebündelt, zugfest;0;3
+2474;23;5;retikuläre Fasern;vernetzt, bilden schwammartiges Stützgerüst;0;3
+2478;3;6;retikuläres Bindegewebe ist Bestandteil der;lymphatischen Organe und des Knochenmarks;1;1
+2482;7;6;Energiereserve;gespeichertes Fett, Speicherfett;1;1
+2483;8;6;Baufett;hüllt als Füll- und Polstergewebe die Organe ein;1;1
+2485;10;6;Unterhaut;Subcutis;1;1
+2486;11;6;können im Fettgewebe gebildet werden;Östrogene;1;1
+2487;12;6;Östrogene;weibliche Geschlechtshormone;1;1
+2497;2;7;Chondroblasten;teilungsfähige Vorläuferzellen der Chondrozyten;1;1
+2498;3;7;Knorpelgewebe enthält keine Blutgefäße;wird von umgebenden Geweben versorgt;1;1
+2502;7;7;am häufigsten vorkommende Knorpel;hyaline Knorpel;1;1
+2503;8;7;Aufgabe hyaliner Knorpel;überzieht die Gelenkflächen;1;1
+2505;10;7;der Faserknorpel besteht aus;stark faserhaltigem und straffem Knorpelgewebe;1;1
+2507;12;7;elastischer Knorpel;Ohrmuschel, Kehlkopfdeckel;1;1
+2509;14;7;Knochengewebe;sehr hart, Stützfunktion;1;1
+2510;15;7;Knochenmineralien bestehen v.a. aus;Kalzium, Phosphat, Magnesium;1;1
+2511;16;7;Knochenmineralien;geben Festigkeit, lassen Druck aushalten;1;1
+2512;17;7;Fasern im Knochengewebe;halten Zugkräfte von Biegung und Drehung aus;1;1
+2513;18;7;Osteozyt;fest in der Knochenmatrix, teilt sich nicht mehr;1;1
+2514;19;7;Knochenzelle;Osteozyt;1;1
+2516;1;8;Zytoplasmaausläufer;verlaufen in den Knochenkanälchen;1;1
+2518;3;8;Knochengewebe wird ständig;umgebaut, Form und Belastung neu angepasst;1;1
+2519;4;8;Umbau des Knochengewebs durch;Osteoblasten und Osteoklasten;1;1
+2520;5;8;Osteoblasten;noch teilungsfähige knochenaufbauende Zellen;1;1
+2521;6;8;Osteoklasten;knochenabbauende Zellen;1;1
+2522;7;8;Knochenzellen sind besonders aktiv im;Wachstum, bei Heilung von Knochenverletzungen;1;1
+2523;8;8;Knochenschaft;Diaphyse;1;1
+2524;9;8;Knochenenden;Epiphysen;1;1
+2525;10;8;Längenwachstumszone;Epiphysenfuge oder Metaphyse;1;1
+2526;11;8;Metaphyse besteht beim Kind aus;Knorpel;1;1
+2527;12;8;nach der Pubertät verknöchert die Metaphyse;Längenwachstum ist beendet;1;1
+2529;14;8;Knochen bis aus die Gelenkflächen mit;faser- und gefäßreichen Knochenhaut bedeckt;1;1
+2530;15;8;Knochenhaut;Periost;1;1
+2532;17;8;harte Rindenschicht, äußere Knochenschicht;Kortikalis;1;1
+2533;18;8;Kortikalis wird im Schaftbereich;Kompakta genannt;1;1
+2535;20;8;Knochenplättchen;Knochenlamellen;1;1
+2537;1;9;Säulenknochen sorgt für;Biegfestigkeit;1;1
+2539;3;9;hin zur Knochenmitte kommt nach dem Säulenknochen;die Spongiosa;1;1
+2540;4;9;Spongiosa;schwammartige Knochenschicht;1;1
+2542;6;9;hohe Tragkraft der Knochenbälkchen wird durch den;bogenförmigen Verlauf erreicht;1;1
+2543;7;9;platte und würfelförmige Knochen;sind mit Spongiosa ausgefüllt;1;1
+2544;8;9;Röhrenknochen haben im Schaftinneren;eine Markhöhle;1;1
+2545;9;9;Hohlräume der Spongiosa sind mit;rotem Knochenmark zur Blutzellenbildung ausgefüllt;1;1
+2546;10;9;beim Kind sind auch die Markhöhlen;mit rotem Knochenmark gefüllt;1;1
+2548;12;9;gelbes Fettmark;bildet keine Blutzellen;1;1
+2550;14;9;Neugeboren haben mit Ausnahme des Schädelknochens;zunächst aus Knorpelgewebe vorgebildete Knochen;1;1
+2552;16;9;Calcium-Einbau in den Knochen wird gefördert durch;Vitamin-D-Hormone;1;1
+2553;17;9;Anatomie;Aufbau;1;1
+2554;18;9;Funktionsweise;Physiologie;1;1
+2555;19;9;krankhafte Veränderungen;Pathologie;1;1
