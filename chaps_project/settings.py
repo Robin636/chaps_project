@@ -27,7 +27,7 @@ SECRET_KEY = '1bxn#a#^$o82tsw94k%5%-mk!&2p@rep!63uh=f!vm(p8c7kn&'
 DEBUG = False
 # DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chapslearn.herokuapp.com']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,7 +84,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'postgres'),
         'USER': 'postgres',
         'PASSWORD': 'pages636',
-        'HOST': '127.0.0.1',
+        'HOST': '0.0.0.0/0',
         'PORT': '5432',
     }
     # 'default': {
@@ -124,7 +125,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'chaps_project/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'chaps_project/static/')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

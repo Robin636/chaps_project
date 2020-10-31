@@ -32,8 +32,8 @@ class CallForm(forms.ModelForm):
     widgets = {
       'textAnswered': Textarea(attrs={'cols': 50, 'rows': 3, 'class':'form-control', 'autofocus': True}),
     }
-  class Media:
-    css = {'all': ('form.css',)}
+  # class Media:
+  #   css = {'all': ('form.css',)}
 
 
 class SettingsForm(forms.Form):
