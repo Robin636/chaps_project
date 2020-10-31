@@ -27,8 +27,7 @@ SECRET_KEY = '1bxn#a#^$o82tsw94k%5%-mk!&2p@rep!63uh=f!vm(p8c7kn&'
 DEBUG = False
 # DEBUG = True
 
-ALLOWED_HOSTS = ['chapslearn.herokuapp.com']
-
+ALLOWED_HOSTS = ['chapslearn.herokuapp.com/']
 
 # Application definition
 
@@ -126,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'chaps_project/static/')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'chaps_project/static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
