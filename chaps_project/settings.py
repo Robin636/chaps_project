@@ -83,7 +83,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'postgres'),
         'USER': 'postgres',
         'PASSWORD': 'pages636',
-        'HOST': '0.0.0.0/0',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
     # 'default': {
