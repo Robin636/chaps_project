@@ -1,7 +1,6 @@
 from django.urls import include, path
 
 from django.contrib import admin
-from django.views.generic.base import TemplateView
 from chaps import views
 
 app_name = 'chaps'
@@ -32,8 +31,3 @@ urlpatterns = [
   path('chap/<int:pk>/pair/<int:id>/<int:ct>/<str:lr>/fail/', views.call_fail, name='call_fail'),
   path('chap/<int:pk>/pair/<int:id>/<int:ct>/<str:lr>/OK/', views.call_OK, name='call_OK'),
 ]
-
-
-
-
-
