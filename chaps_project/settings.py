@@ -88,9 +88,11 @@ DATABASES = {
         'NAME': 'chapdb',
         # 'NAME': os.path.join(BASE_DIR, 'postgres'),
         'USER': 'postgres',
-        'PASSWORD': 'pages636',
+        # 'PASSWORD': 'pages636',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '',
+        # 'PORT': '5432',
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
