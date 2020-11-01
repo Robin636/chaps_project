@@ -24,10 +24,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'chaps/templates')
 SECRET_KEY = '1bxn#a#^$o82tsw94k%5%-mk!&2p@rep!63uh=f!vm(p8c7kn&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = True
+# DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['chapslearn.herokuapp.com/']
+#ALLOWED_HOSTS = ['chapslearn.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -124,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'chaps_project')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'chaps_project/static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
