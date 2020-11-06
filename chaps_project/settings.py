@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
-# import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,8 +88,8 @@ DATABASES = {
         'NAME': 'chapdb',
         # 'NAME': os.path.join(BASE_DIR, 'postgres'),
         'USER': 'postgres',
-        # 'PASSWORD': 'pages636',
-        'PASSWORD': '',
+        'PASSWORD': 'pages636',
+        # 'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
         # 'PORT': '5432',
@@ -144,3 +144,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+import dj_database_url
+DATABASES['default'] =dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# configure Django App for Heroku
+# import django_heroku
+# django_heroku.settings(locals())
