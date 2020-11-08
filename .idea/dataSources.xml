@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/chapdb</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="chapdb@heroku" uuid="66231e4a-a4ff-43d9-b0b8-a6123b0e9c68">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-75-229-28.eu-west-1.compute.amazonaws.com:5432/dcpv057i5gjqcc</jdbc-url>
+    </data-source>
   </component>
 </project>
