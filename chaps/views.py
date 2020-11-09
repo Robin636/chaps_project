@@ -143,6 +143,8 @@ def callPairs(request, pk, ct):
 
   chap = get_object_or_404(Chap, pk=pk)
   call = Call.objects.first() # for text (given and answered) there is only one object
+  # ct calltype (all, called, fail) set via button
+  call.callType = ct
 
   #_________
   if request.method == 'POST':
@@ -177,7 +179,7 @@ def callPairs(request, pk, ct):
 
   else:
     # ct calltype (all, called, fail) set via button
-    call.callType = ct
+    # call.callType = ct
 
     # set via chap_settings per chap
     # lr: left, right and rs: random, serial
