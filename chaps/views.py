@@ -187,18 +187,18 @@ def callPairs(request, pk, ct):
 
     pair_list = chap.pairs.all()
     if ct == 0: #alle abfragen
-      chap.toCallNum1 = 0
-      chap.toCallNum2 = 0
+      chap.toCallNum0 = 0
+      #chap.toCallNum2 = 0
 
     if ct == 1:  # Rest abfragen
       pair_list = chap.pairs.filter(status=0)
       chap.toCallNum0 = 0
-      chap.toCallNum2 = 0
+      #chap.toCallNum2 = 0
 
     if ct == 2:  # Fehler abfragen
       pair_list = chap.pairs.filter(status=2)
       chap.toCallNum0 = 0
-      chap.toCallNum1 = 0
+      #chap.toCallNum1 = 0
 
     chap.save()
 
@@ -218,9 +218,10 @@ def callPairs(request, pk, ct):
     else:
       # serial call
       if ct == 0:
-        num = chap.toCallNum0
-        chap.toCallNum0 = num +1
-        chap.save()
+        num = 0
+        # num = chap.toCallNum0
+        # chap.toCallNum0 = num +1
+        # chap.save()
       else:
         num = 0
 
@@ -284,8 +285,8 @@ def callReset(request, pk):
   chap.sum1 = 0
   chap.sum2 = 0
   chap.toCallNum0 = 0
-  chap.toCallNum1 = 0
-  chap.toCallNum2 = 0
+  #chap.toCallNum1 = 0
+  #chap.toCallNum2 = 0
   chap.save()
 
   for objPair in chap.pairs.all():
