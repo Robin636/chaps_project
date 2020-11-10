@@ -144,6 +144,7 @@ def callPairs(request, pk, ct):
   chap = get_object_or_404(Chap, pk=pk)
   call = Call.objects.first() # for text (given and answered) there is only one object
   # ct calltype (all, called, fail) set via button
+  call.callType = ct
 
   #_________
   if request.method == 'POST':
@@ -178,35 +179,23 @@ def callPairs(request, pk, ct):
 
   else:
     # ct calltype (all=0, called=1, fail=2) set via button
-    call.callType = ct
+    # lr: left, right and rs: random, serial set via chap_settings per chap
 
-    # set via chap_settings per chap
-    # lr: left, right and rs: random, serial
-    lr = chap.lr
-    rs = chap.rs
-
-    pair_list = chap.pairs.all()
-    if ct == 0: #alle abfragen
-      chap.toCallNum0 = 0
-      #chap.toCallNum2 = 0
+    pair_list = chap.pairs.all() # ct=0,1,2 alle abfragen
 
     if ct == 1:  # Rest abfragen
       pair_list = chap.pairs.filter(status=0)
-      chap.toCallNum0 = 0
-      #chap.toCallNum2 = 0
 
     if ct == 2:  # Fehler abfragen
       pair_list = chap.pairs.filter(status=2)
-      chap.toCallNum0 = 0
-      #chap.toCallNum1 = 0
 
-    chap.save()
+    # chap.save()
 
     if pair_list.count() == 0:
       return render(request, 'chaps/chap_detail.html', {'chap': chap})
       # message und Abfrage zurücksetzen
 
-    if rs == "r":
+    if chap.rs == "r":
       # erzeuge Zufallzahl zwischen 1 und Anzahl pairs
       if pair_list.count() == 1:
         ir = 1
@@ -217,11 +206,8 @@ def callPairs(request, pk, ct):
       id = objPair.id
     else:
       # serial call
-      if ct == 0:
-        num = 0
-        # num = chap.toCallNum0
-        # chap.toCallNum0 = num +1
-        # chap.save()
+      if ct == 2:
+        num = chap.toCallNum0
       else:
         num = 0
 
@@ -232,7 +218,7 @@ def callPairs(request, pk, ct):
       id = objPair.id
 
 
-    if lr == "L":
+    if chap.lr == "L":
       pair_text = objPair.textL
     else:
       pair_text = objPair.textR
@@ -262,6 +248,10 @@ def call_fail(request, pk, id, ct, lr):
   chap.sum1 = chap.pairs.filter(status=1).count() # called OK
   chap.sum2 = chap.pairs.filter(status=2).count() # called fail
   chap.sum1 = chap.sum1 + chap.sum2 # called
+
+  if ct == 2:  # Fehler abfragen: wenn nicht richtig beantwortet bleibt die pair_list gleich
+    chap.toCallNum0 += 1
+
   chap.save()
   return redirect('chaps:callPairs', pk, ct)
 

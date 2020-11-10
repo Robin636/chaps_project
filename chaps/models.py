@@ -8,7 +8,7 @@ class Chap(models.Model):
   sum2 = models.IntegerField(default=0) # called fail
   lr = models.CharField(max_length=2, default="L")  # Links or Rechts
   rs = models.CharField(max_length=2, default="r")  # random or serial
-  toCallNum0 = models.IntegerField(default=0) # for serial calls all
+  toCallNum0 = models.IntegerField(default=0) # for serial calls fail
 
   def get_absolute_url(self):
     return reverse('chaps:chap_detail', kwargs={'pk':self.pk})
