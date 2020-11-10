@@ -206,7 +206,7 @@ def callPairs(request, pk, ct):
       id = objPair.id
     else:
       # serial call
-      if ct == 2:
+      if ct != 1:
         num = chap.toCallNum0
       else:
         num = 0
@@ -249,7 +249,9 @@ def call_fail(request, pk, id, ct, lr):
   chap.sum2 = chap.pairs.filter(status=2).count() # called fail
   chap.sum1 = chap.sum1 + chap.sum2 # called
 
-  if ct == 2:  # Fehler abfragen: wenn nicht richtig beantwortet bleibt die pair_list gleich
+  # bei alle abfragen bleibt die pair_list gleich
+  # Fehler abfragen: wenn nicht richtig beantwortet bleibt die pair_list gleich
+  if ct != 1:
     chap.toCallNum0 += 1
 
   chap.save()
@@ -266,6 +268,11 @@ def call_OK(request, pk, id, ct, lr):
   chap.sum1 = chap.pairs.filter(status=1).count() # called OK
   chap.sum2 = chap.pairs.filter(status=2).count() # called fail
   chap.sum1 = chap.sum1 + chap.sum2 # called
+
+  # bei alle abfragen bleibt die pair_list gleich
+  if ct == 0:
+    chap.toCallNum0 += 1
+
   chap.save()
   return redirect('chaps:callPairs', pk, ct)
 
@@ -275,8 +282,6 @@ def callReset(request, pk):
   chap.sum1 = 0
   chap.sum2 = 0
   chap.toCallNum0 = 0
-  #chap.toCallNum1 = 0
-  #chap.toCallNum2 = 0
   chap.save()
 
   for objPair in chap.pairs.all():
