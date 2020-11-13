@@ -55,8 +55,8 @@ class PairForm(forms.ModelForm):
   required_css_class = 'required'
   class Meta():
     model = Pair
-    # exclude = ('chap', 'status')
-    fields = ('chap', 'textL', 'textR', 'status')
+    exclude = ('chap', 'status')
+    # fields = ('chap', 'textL', 'textR', 'status')
     widgets = {
       'textL': Textarea(attrs={'cols': 55, 'rows':3, 'class':'form-control', 'autofocus': True}),
       'textR': Textarea(attrs={'cols': 55, 'rows':3}),
