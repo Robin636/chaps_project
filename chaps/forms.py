@@ -10,9 +10,9 @@ class ChapForm(forms.ModelForm):
   required_css_class = 'required'
   class Meta():
     model = Chap
-    # exclude = ('author', 'sum1', 'sum2')
+    exclude = ('author', 'sum1', 'sum2', 'lr', 'rs', 'toCallNum0')
     # fields = ('name',)
-    fields = ('name', 'author', 'sum1', 'sum2', 'lr', 'rs', 'toCallNum0')
+    # fields = ('name', 'author', 'sum1', 'sum2', 'lr', 'rs', 'toCallNum0')
     widgets = {
       'name': Textarea(attrs={'cols': 40, 'rows':1}),
     }
