@@ -217,7 +217,6 @@ def callPairs(request, pk, ct):
       objPair = pair_list[num]
       id = objPair.id
 
-
     if chap.lr == "L":
       pair_text = objPair.textL
     else:

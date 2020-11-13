@@ -11,7 +11,8 @@ class ChapForm(forms.ModelForm):
   class Meta():
     model = Chap
     # exclude = ('author', 'sum1', 'sum2')
-    fields = ('name',)
+    # fields = ('name',)
+    fields = ('name', 'author', 'sum1', 'sum2', 'lr', 'rs', 'toCallNum0')
     widgets = {
       'name': Textarea(attrs={'cols': 40, 'rows':1}),
     }
