@@ -58,7 +58,10 @@ class ChapListView(ListView):
 
   def get_queryset(self):
     qs = super().get_queryset()
-    return qs.filter(author_id=self.request.user.id)
+    qs = qs.filter(author_id=self.request.user.id)
+    qs = qs.order_by("id")
+    return qs
+    # return qs.filter(author_id=self.request.user.id)
 
 
 class ChapDetailView(DetailView):
@@ -141,6 +144,7 @@ def pair_update(request, pk, id):
 @login_required
 def callPairs(request, pk, ct):
 
+  global id
   chap = get_object_or_404(Chap, pk=pk)
   call = Call.objects.first() # for text (given and answered) there is only one object
   # ct calltype (all, called, fail) set via button
@@ -167,6 +171,8 @@ def callPairs(request, pk, ct):
         chap.sum1 = chap.pairs.filter(status=1).count()
         chap.sum2 = chap.pairs.filter(status=2).count()
         chap.sum1 = chap.sum1 + chap.sum2
+        if ct == 0:
+          chap.toCallNum0 += 1  # pair_list ändert sich nicht
         chap.save()
         return redirect('chaps:callPairs', pk=objPair.chap.pk, ct=call.callType)
 
@@ -189,7 +195,7 @@ def callPairs(request, pk, ct):
     if ct == 2:  # Fehler abfragen
       pair_list = chap.pairs.filter(status=2)
 
-    # chap.save()
+    pair_list = pair_list.order_by("id")
 
     if pair_list.count() == 0:
       return render(request, 'chaps/chap_detail.html', {'chap': chap})
@@ -206,12 +212,12 @@ def callPairs(request, pk, ct):
       id = objPair.id
     else:
       # serial call
-      if ct != 1:
+      if ct == 0:
         num = chap.toCallNum0
       else:
         num = 0
 
-      if num > pair_list.count() - 1:
+      if pair_list.count() - num <= 0:
         return render(request, 'chaps/chap_detail.html', {'chap': chap})
 
       objPair = pair_list[num]
@@ -228,13 +234,25 @@ def callPairs(request, pk, ct):
     form = CallForm(request.POST)
 
     context = {
-      'form':form,
-      'objChap':chap,
-      'pair_text':pair_text,
+      'form': form,
+      'objChap': chap,
+      'pair_text': pair_text,
       'pairs_count': chap.pairs.count(),
-      'ct': call.callType
+      'ct': call.callType,
     }
     return render(request, 'chaps/call_form.html', context)
+
+
+def call_next(request, pk, ct):
+  chap = get_object_or_404(Chap, pk=pk)
+  call = Call.objects.first()  # for text (given and answered) there is only one object
+  # ct calltype (all, called, fail) set via button
+
+  if ct == 0:
+    chap.toCallNum0 += 1
+    chap.save()
+
+  return redirect('chaps:callPairs', pk, ct)
 
 
 def call_fail(request, pk, id, ct, lr):
@@ -248,10 +266,18 @@ def call_fail(request, pk, id, ct, lr):
   chap.sum2 = chap.pairs.filter(status=2).count() # called fail
   chap.sum1 = chap.sum1 + chap.sum2 # called
 
-  # bei alle abfragen bleibt die pair_list gleich
+  # bei "alle abfragen" bleibt die pair_list gleich
   # Fehler abfragen: wenn nicht richtig beantwortet bleibt die pair_list gleich
-  if ct != 1:
-    chap.toCallNum0 += 1
+  if ct == 0:
+    chap.toCallNum0 += 1 # pair_list ändert sich nicht
+
+  # nichts machen, da pair_list.filter(status=0) sich ändert
+  # if ct == 1:
+  #   pass
+
+  # nichts machen, da pair_list.filter(status=2) sich ändert (wenn OK, oder nochmal in pair_list ist bei fail)
+  # if ct == 2:
+  #   pass
 
   chap.save()
   return redirect('chaps:callPairs', pk, ct)
@@ -268,9 +294,8 @@ def call_OK(request, pk, id, ct, lr):
   chap.sum2 = chap.pairs.filter(status=2).count() # called fail
   chap.sum1 = chap.sum1 + chap.sum2 # called
 
-  # bei alle abfragen bleibt die pair_list gleich
   if ct == 0:
-    chap.toCallNum0 += 1
+    chap.toCallNum0 += 1  # pair_list ändert sich nicht
 
   chap.save()
   return redirect('chaps:callPairs', pk, ct)

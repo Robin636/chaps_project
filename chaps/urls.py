@@ -27,6 +27,7 @@ urlpatterns = [
   path('chap/<int:pk>/callReset/', views.callReset, name='callReset'),
 
   path('chap/<int:pk>/<int:ct>/callPairs/', views.callPairs, name='callPairs'),
+  path('chap/<int:pk>/<int:ct>/callPairs/next/', views.call_next, name='call_next'),
 
   path('chap/<int:pk>/pair/<int:id>/<int:ct>/<str:lr>/fail/', views.call_fail, name='call_fail'),
   path('chap/<int:pk>/pair/<int:id>/<int:ct>/<str:lr>/OK/', views.call_OK, name='call_OK'),

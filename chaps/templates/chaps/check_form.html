@@ -59,11 +59,9 @@
 
   <table style="margin-top: 30px" width="100%">
   <tr>
-    <td width="40%"><a class="btn btn-secondary" tabindex="1" href="{% url 'chaps:chap_detail' pk=objChap.pk %}">Cancel</a></td>
-    <td width="20%"><a class="btn btn-success" tabindex="2" href="{% url 'chaps:call_OK' pk=objChap.pk id=objPair.id ct=ct lr=lr %}"><span class="fas fa-thumbs-up"></span></a></td>
-    <td width="20%"><a class="btn btn-danger" tabindex="3" href="{% url 'chaps:call_fail' pk=objChap.pk id=objPair.id ct=ct lr=lr %}"><span class="fas fa-thumbs-down"></span></a></td>
-
-    <td width="20%"><a class="btn btn-info" tabindex="4" href="{% url 'chaps:callPairs' pk=objChap.pk ct=ct %}">Next</a></td>
+    <td width="50%"><a class="btn btn-secondary" tabindex="1" href="{% url 'chaps:chap_detail' pk=objChap.pk %}">Cancel</a></td>
+    <td width="25%"><a class="btn btn-success" tabindex="2" href="{% url 'chaps:call_OK' pk=objChap.pk id=objPair.id ct=ct lr=lr %}"><span class="fas fa-thumbs-up"></span></a></td>
+    <td width="25%"><a class="btn btn-danger" tabindex="3" href="{% url 'chaps:call_fail' pk=objChap.pk id=objPair.id ct=ct lr=lr %}"><span class="fas fa-thumbs-down"></span></a></td>
   </tr>
 </table>
 
