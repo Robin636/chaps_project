@@ -12,7 +12,8 @@ SECRET_KEY = '1bxn#a#^$o82tsw94k%5%-mk!&2p@rep!63uh=f!vm(p8c7kn&'
 # ALLOWED_HOSTS = ['*']
 
 DEBUG = False
-ALLOWED_HOSTS = ['chapslearn.herokuapp.com']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['chapslearn.herokuapp.com']
 
 
 # Application definition
