@@ -92,6 +92,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL = '/chaps/'
 LOGOUT_REDIRECT_URL = '/'
 
+SESSION_COOKIE_AGE = 28800   # 8 hour in seconds
+
 import dj_database_url
 DATABASES['default'] =dj_database_url.config(conn_max_age=600, ssl_require=True)
 
