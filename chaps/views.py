@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from chaps.models import Chap, Pair, Call, IChap, IPair
+from chaps.models import Chap, Pair, Call
+# from chaps.models import IChap, IPair for import (via AboutView)
 from chaps.forms import ChapForm, PairForm, CallForm, SettingsForm
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.decorators import login_required
@@ -50,18 +51,20 @@ class AboutView(TemplateView):
 #     return render(request, 'chaps/about.html', {'object_list': object_list})
 
 
-# @login_required
 class ChapListView(ListView):
   template_name = "chaps/chap_list.html"
   model = Chap
   context_object_name = 'chap'
+
+  @method_decorator(login_required)
+  def for_dec(self, request):
+    pass
 
   def get_queryset(self):
     qs = super().get_queryset()
     qs = qs.filter(author_id=self.request.user.id)
     qs = qs.order_by("id")
     return qs
-    # return qs.filter(author_id=self.request.user.id)
 
 
 class ChapDetailView(DetailView):
@@ -243,6 +246,7 @@ def callPairs(request, pk, ct):
     return render(request, 'chaps/call_form.html', context)
 
 
+@login_required
 def call_next(request, pk, ct):
   chap = get_object_or_404(Chap, pk=pk)
   call = Call.objects.first()  # for text (given and answered) there is only one object
@@ -255,6 +259,7 @@ def call_next(request, pk, ct):
   return redirect('chaps:callPairs', pk, ct)
 
 
+@login_required
 def call_fail(request, pk, id, ct, lr):
   chap = get_object_or_404(Chap, pk=pk)
 
@@ -283,6 +288,7 @@ def call_fail(request, pk, id, ct, lr):
   return redirect('chaps:callPairs', pk, ct)
 
 
+@login_required
 def call_OK(request, pk, id, ct, lr):
   chap = get_object_or_404(Chap, pk=pk)
 
@@ -301,6 +307,7 @@ def call_OK(request, pk, id, ct, lr):
   return redirect('chaps:callPairs', pk, ct)
 
 
+@login_required
 def callReset(request, pk):
   chap = get_object_or_404(Chap, pk=pk)
   chap.sum1 = 0
@@ -314,6 +321,7 @@ def callReset(request, pk):
   return render(request, 'chaps/chap_detail.html', {'chap': chap})
 
 
+@login_required
 def settings(request, pk):
   chap = get_object_or_404(Chap, pk=pk)
   if request.method == 'POST':
