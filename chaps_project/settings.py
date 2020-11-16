@@ -8,11 +8,10 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'chaps/templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1bxn#a#^$o82tsw94k%5%-mk!&2p@rep!63uh=f!vm(p8c7kn&'
 
-# DEBUG = True    # should be False, then change ALLOWED_HOSTS??
-# ALLOWED_HOSTS = ['*']
-
-DEBUG = False
+DEBUG = True    # should be False, then change ALLOWED_HOSTS??
 ALLOWED_HOSTS = ['*']
+
+# DEBUG = False
 # ALLOWED_HOSTS = ['chapslearn.herokuapp.com']
 
 
