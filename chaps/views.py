@@ -117,6 +117,13 @@ def add_pair_to_chap(request, pk):
     if form.is_valid():
       pair = form.save(commit=False)
       pair.chap = objChap
+      id_list = []
+      pair_list = Pair.objects.all()
+      for item in pair_list:
+        id_list.append(item.id)
+      id_list.sort()
+      id = id_list[-1]
+      pair.id = id + 1
       pair.save()
 
   return render(request, 'chaps/pair_form.html', context)
