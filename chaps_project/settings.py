@@ -1,6 +1,7 @@
 # production - for deployment on heroku
 import os
 import dotenv
+# from dotenv import load_dotenv
 import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
