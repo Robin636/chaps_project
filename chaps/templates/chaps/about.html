@@ -4,9 +4,9 @@
 
   <h3>About Chapters</h3>
   <br>
-  <p>Vielen Dank für die Nutzung von Chapters. Es erlaubt die Erstellung, Änderung und Zuordnung von Textpaaren zu einer Themenüberschrift.</p>
+  <p>Vielen Dank für die Nutzung von Chapters. Es erlaubt die Erstellung, Änderung und Abfrage von Textpaaren zu einer Themenüberschrift.</p>
   <br>
-  <p>Außerdem können Textpaare abgefragt werden.</p><p> Dazu ist der Abfragemodus mit Call Settings (L/R,r/s) auf</p>
+  <p>Dazu ist der Abfragemodus mit Call Settings (L/R,r/s) auf</p>
   <ul>
   <li>Links (L)/Rechts (R)</li>
   <li>zufällige Auswahl (r)/der Reihe nach (s)</li>
@@ -16,7 +16,7 @@
   <p>Mit Click auf Chapters werden alle Kapitel angezeigt. Die Angaben in Klammern rechts bedeuten:</p>
   <p>(Anzahl aller Textpaare/bereits abgefragte Textpaare/davon nicht richtig beantwortet).</p>
   <br>
-  <p>Die Abfrage wird innerhalb eine Kapitels gestartet und eingestellt.</p>
+  <p>Die Abfrage wird nur innerhalb eine Kapitels gestartet und eingestellt.</p>
   <ul>
   <li>All (x): alle Textpaare werden berücksichtigt</li>
   <li>Called (x): es werden nur die Textpaare abgefragt, die noch nicht abgefragt wurden.</li>
@@ -26,7 +26,11 @@
   <p>Wenn die Zahl bei All und Called gleich ist und Failed (0), startet keine Anfrage.</p>
   <p>Der Status der Textpaare (gewusst oder nicht) wird mit Häkchen und Minuszeichen innerhalb der Kapitelansicht dargestellt.</p>
 
+ <p>Innerhalb der Abfrage wird bei click auf Check gleich das nächste Textpaar abgefragt, falls die Antwort richtig war.</p>
+ <p>Sonst wird die Antwort und der richtige Text untereinandergestellt. Der User entscheidet dann, ob die Antwort richtig oder falsch ist.</p>
+ <p>"Leere Eingaben" sind nicht zulässig.</p>
 
+ <p>Die Abfrage und das Erstellen von Textpaaren wird mit Cancel beendet.</p>
 
   <table>
     {% for item in object_list %}
