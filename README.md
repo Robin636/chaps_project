@@ -11,7 +11,7 @@ Mit Click auf Chapters werden alle Kapitel angezeigt.
 Die Angaben in Klammern rechts bedeuten:
 (Anzahl aller Textpaare/bereits abgefragte Textpaare/davon nicht richtig beantwortet).
 
- Die Abfrage wird nur innerhalb eine Kapitels gestartet.
+ Die Abfrage wird nur innerhalb eine Kapitels gestartet und eingestellt.
 
  All (x): alle Textpaare werden berücksichtigt
  Called (x): es werden nur die Textpaare abgefragt, die noch nicht abgefragt wurden.
